@@ -1,13 +1,13 @@
 About r-rsqlite
 ===============
 
-Home: https://github.com/rstats-db/RSQLite
+Home: https://github.com/r-dbi/RSQLite
 
 Package license: LGPL (>= 2)
 
 Feedstock license: BSD 3-Clause
 
-Summary: Embeds the 'SQLite' database engine in R and provides an interface compliant with the 'DBI' package. The source for the 'SQLite' engine (version 3.8.8.2) is included.
+Summary: Embeds the 'SQLite' database engine in R and provides an interface compliant with the 'DBI' package. The source for the 'SQLite' engine is included.
 
 
 
