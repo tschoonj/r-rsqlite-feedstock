@@ -16,7 +16,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -48,7 +48,8 @@ requirements:
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
-    - r-bh
+    # BH is the header-only part of Boost and thus a compile-time requirement only
+    # - r-bh
     - r-dbi >=1.0.0
     - r-rcpp >=0.12.7
     - r-bit64
