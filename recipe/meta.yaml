@@ -1,5 +1,4 @@
-{% set version = "2.1.4" %}
-
+{% set version = '2.1.4' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -8,7 +7,6 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: RSQLite_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/RSQLite_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RSQLite/RSQLite_{{ version }}.tar.gz
@@ -21,30 +19,27 @@ build:
     - lib/R/lib/
     - lib/
 
-# Suggests: DBItest, knitr, rmarkdown, testthat
 requirements:
   build:
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
+    - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
-    - {{ compiler('m2w64_cxx') }}        # [win]
+    - {{ compiler('cxx') }}            # [not win]
+    - {{ compiler('m2w64_cxx') }}      # [win]
     - {{posix}}filesystem        # [win]
     - {{posix}}make
     - {{posix}}sed               # [win]
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
-
   host:
     - r-base
     - r-bh
     - r-dbi >=1.0.0
     - r-rcpp >=0.12.7
     - r-bit64
-    - r-blob >=1.1.1
+    - r-blob >=1.2.0
     - r-memoise
     - r-pkgconfig
     - r-plogr >=0.2.0
-
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
@@ -53,7 +48,7 @@ requirements:
     - r-dbi >=1.0.0
     - r-rcpp >=0.12.7
     - r-bit64
-    - r-blob >=1.1.1
+    - r-blob >=1.2.0
     - r-memoise
     - r-pkgconfig
     - r-plogr >=0.2.0
@@ -65,14 +60,37 @@ test:
 
 about:
   home: https://github.com/r-dbi/RSQLite
-  license: LGPL (>= 2)
+  license: LGPL-2
   summary: Embeds the 'SQLite' database engine in R and provides an interface compliant with
     the 'DBI' package. The source for the 'SQLite' engine is included.
   license_family: LGPL
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/LGPL-2'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - dpryan79
-    - johanneskoester
-    - bgruening
+
+# Package: RSQLite
+# Title: 'SQLite' Interface for R
+# Version: 2.1.4
+# Date: 2019-12-04
+# Authors@R: c( person("Kirill", "M\u00fcller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org", comment = c(ORCID = "0000-0002-1416-3412")), person("Hadley", "Wickham", role = c("aut")), person(c("David", "A."), "James", role = "aut"), person("Seth", "Falcon", role = "aut"), person(family = "SQLite Authors", role = "ctb", comment = "for the included SQLite sources"), person("Liam", "Healy", role = "ctb", comment = "for the included SQLite sources"), person(family = "R Consortium", role = "fnd"), person(family = "RStudio", role = "cph") )
+# Description: Embeds the 'SQLite' database engine in R and provides an interface compliant with the 'DBI' package. The source for the 'SQLite' engine is included.
+# License: LGPL (>= 2)
+# URL: https://github.com/r-dbi/RSQLite
+# BugReports: https://github.com/r-dbi/RSQLite/issues
+# Depends: R (>= 3.1.0)
+# Imports: bit64, blob (>= 1.2.0), DBI (>= 1.0.0), memoise, methods, pkgconfig, Rcpp (>= 0.12.7)
+# Suggests: DBItest, knitr, rmarkdown, testthat
+# LinkingTo: BH, plogr (>= 0.2.0), Rcpp
+# VignetteBuilder: knitr
+# Encoding: UTF-8
+# RoxygenNote: 6.1.1
+# Collate: 'RcppExports.R' 'SQLiteConnection.R' 'SQLiteDriver.R' 'SQLiteResult.R' 'coerce.R' 'connect.R' 'copy.R' 'datasetsDb.R' 'deprecated.R' 'export.R' 'extensions.R' 'names.R' 'query.R' 'regularExpressions.R' 'rownames.R' 'table.R' 'transactions.R' 'utils.R' 'zzz.R'
+# NeedsCompilation: yes
+# Packaged: 2019-12-04 20:55:04 UTC; kirill
+# Author: Kirill Muller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>), Hadley Wickham [aut], David A. James [aut], Seth Falcon [aut], SQLite Authors [ctb] (for the included SQLite sources), Liam Healy [ctb] (for the included SQLite sources), R Consortium [fnd], RStudio [cph]
+# Maintainer: Kirill Muller <krlmlr+r@mailbox.org>
+# Repository: CRAN
+# Date/Publication: 2019-12-04 22:30:06 UTC
