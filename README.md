@@ -3,7 +3,7 @@ About r-rsqlite
 
 Home: https://github.com/r-dbi/RSQLite
 
-Package license: LGPL (>= 2)
+Package license: LGPL-2
 
 Feedstock license: BSD 3-Clause
 
@@ -176,8 +176,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bgruening](https://github.com/bgruening/)
 * [@conda-forge/r](https://github.com/conda-forge/r/)
-* [@dpryan79](https://github.com/dpryan79/)
-* [@johanneskoester](https://github.com/johanneskoester/)
 
