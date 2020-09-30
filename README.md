@@ -3,7 +3,7 @@ About r-rsqlite
 
 Home: https://github.com/r-dbi/RSQLite
 
-Package license: LGPL-2
+Package license: LGPL-2.1-or-later
 
 Feedstock license: BSD-3-Clause
 
