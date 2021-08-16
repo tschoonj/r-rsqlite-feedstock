@@ -1,0 +1,12 @@
+diff --git a/src/Makevars b/src/Makevars
+index df204a84..6892d1b1 100644
+--- a/src/Makevars
++++ b/src/Makevars
+@@ -8,6 +8,7 @@ PKG_CPPFLAGS=-I. -Ivendor \
+              -DSQLITE_ENABLE_JSON1 \
+              -DSQLITE_ENABLE_STAT4 \
+              -DSQLITE_SOUNDEX \
++             -DSQLITE_USE_URI=1 \
+              -DRCPP_DEFAULT_INCLUDE_CALL=false \
+              -DRCPP_USING_UTF8_ERROR_STRING \
+              -DBOOST_NO_AUTO_PTR \

@@ -11,6 +11,8 @@ source:
     - {{ cran_mirror }}/src/contrib/RSQLite_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RSQLite/RSQLite_{{ version }}.tar.gz
   sha256: 3126a38f51610a90f411e54d7280e6ccf2a2b438dfa28d312c5e90dd3cb109c9
+  patches:
+    - uri.patch
 
 build:
   merge_build_host: true  # [win]
@@ -40,6 +42,7 @@ requirements:
     - r-memoise
     - r-pkgconfig
     - r-plogr >=0.2.0
+    - boost-cpp
   run:
     - r-base
     - {{ native }}gcc-libs         # [win]
