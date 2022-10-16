@@ -14,13 +14,22 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
+    - cross-r-base {{ r_base }}  # [build_platform != target_platform]
+    - r-bh                       # [build_platform != target_platform]
+    - r-dbi >=1.1.0              # [build_platform != target_platform]
+    - r-rcpp >=0.12.7            # [build_platform != target_platform]
+    - r-bit64                    # [build_platform != target_platform]
+    - r-blob >=1.2.0             # [build_platform != target_platform]
+    - r-memoise                  # [build_platform != target_platform]
+    - r-pkgconfig                # [build_platform != target_platform]
+    - r-plogr >=0.2.0            # [build_platform != target_platform]
     - {{ compiler('c') }}              # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
     - {{ compiler('cxx') }}            # [not win]
