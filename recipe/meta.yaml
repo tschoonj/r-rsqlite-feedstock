@@ -1,4 +1,4 @@
-{% set version = "2.2.18" %}
+{% set version = "2.2.19" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RSQLite_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RSQLite/RSQLite_{{ version }}.tar.gz
-  sha256: 62196adb62ad8ec73ddce573e5391686e9359566e365b123ac4f299809944bea
+  sha256: 720f6b3bd0f910d200f4900f90feda177d1a6da098b373f91f14abcffd785f86
 
 build:
   merge_build_host: true  # [win]
