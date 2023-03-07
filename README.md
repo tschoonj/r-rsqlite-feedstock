@@ -1,11 +1,22 @@
+About r-rsqlite-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rsqlite-feedstock/blob/main/LICENSE.txt)
+
 About r-rsqlite
-===============
+---------------
 
 Home: https://github.com/r-dbi/RSQLite
 
 Package license: LGPL-2.1-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rsqlite-feedstock/blob/main/LICENSE.txt)
+Summary: Embeds the 'SQLite' database engine in R and provides an interface compliant with the 'DBI' package. The source for the 'SQLite' engine is included.
+About r-rsqlite
+---------------
+
+Home: https://github.com/r-dbi/RSQLite
+
+Package license: LGPL-2.1-or-later
 
 Summary: Embeds the 'SQLite' database engine in R and provides an interface compliant with the 'DBI' package. The source for the 'SQLite' engine is included.
 
