@@ -1,4 +1,4 @@
-{% set version = "2.3.4" %}
+{% set version = "2.3.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/RSQLite_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/RSQLite/RSQLite_{{ version }}.tar.gz
-  sha256: 73cdc81bb3cfce6f680a8ee384927867520a883e6d0705f6d6c79dccd4fbc4eb
+  sha256: 25e0572589e64264fe4e5d0495f5d85d977bacbb93a3fc631ede5b078db294ce
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
